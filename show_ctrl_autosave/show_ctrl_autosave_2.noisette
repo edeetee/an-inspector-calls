@@ -1,0 +1,1166 @@
+{
+  "metaData": {
+    "version": "1.9.17",
+    "versionNumber": 67857
+  },
+  "projectSettings": {
+    "containers": {
+      "dashboardSettings": {
+        "parameters": [
+          {
+            "value": "",
+            "controlAddress": "/showDashboardOnStartup",
+            "enabled": false
+          }
+        ]
+      },
+      "customDefinitions": {
+      }
+    }
+  },
+  "dashboardManager": {
+    "items": [
+      {
+        "niceName": "Dashboard",
+        "type": "BaseItem",
+        "itemManager": {
+          "parameters": [
+            {
+              "value": [
+                1200.0,
+                800.0
+              ],
+              "controlAddress": "/canvasSize",
+              "enabled": false
+            },
+            {
+              "value": "",
+              "controlAddress": "/backgroundImage"
+            }
+          ],
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": [
+                    400.0,
+                    300.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/oscDoor/values",
+                  "controlAddress": "/target"
+                }
+              ],
+              "niceName": "Item",
+              "hideInEditor": true,
+              "type": "DashboardCCItem",
+              "ghostAddress": "/modules/oscDoor/values",
+              "container": "/modules/oscDoor/values"
+            }
+          ],
+          "viewOffset": [
+            -242,
+            -208
+          ],
+          "viewZoom": 1.0
+        },
+        "editing": true
+      }
+    ],
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  },
+  "parrots": {
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  },
+  "layout": {
+    "mainLayout": {
+      "type": 1,
+      "width": 1578,
+      "height": 1073,
+      "direction": 2,
+      "shifters": [
+        {
+          "type": 1,
+          "width": 1578,
+          "height": 1073,
+          "direction": 2,
+          "shifters": [
+            {
+              "type": 1,
+              "width": 1578,
+              "height": 658,
+              "direction": 1,
+              "shifters": [
+                {
+                  "type": 1,
+                  "width": 307,
+                  "height": 658,
+                  "direction": 2,
+                  "shifters": [
+                    {
+                      "type": 0,
+                      "width": 307,
+                      "height": 336,
+                      "currentContent": "Modules",
+                      "tabs": [
+                        {
+                          "name": "Modules"
+                        }
+                      ]
+                    },
+                    {
+                      "type": 0,
+                      "width": 307,
+                      "height": 316,
+                      "currentContent": "Custom Variables",
+                      "tabs": [
+                        {
+                          "name": "Custom Variables"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": 0,
+                  "width": 895,
+                  "height": 658,
+                  "currentContent": "State Machine",
+                  "tabs": [
+                    {
+                      "name": "State Machine"
+                    },
+                    {
+                      "name": "Dashboard"
+                    },
+                    {
+                      "name": "Module Router"
+                    },
+                    {
+                      "name": "Morpher"
+                    }
+                  ]
+                },
+                {
+                  "type": 0,
+                  "width": 364,
+                  "height": 658,
+                  "currentContent": "Inspector",
+                  "tabs": [
+                    {
+                      "name": "Inspector"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": 1,
+              "width": 1578,
+              "height": 409,
+              "direction": 1,
+              "shifters": [
+                {
+                  "type": 0,
+                  "width": 240,
+                  "height": 409,
+                  "currentContent": "Sequences",
+                  "tabs": [
+                    {
+                      "name": "Sequences"
+                    }
+                  ]
+                },
+                {
+                  "type": 0,
+                  "width": 960,
+                  "height": 409,
+                  "currentContent": "Sequence Editor",
+                  "tabs": [
+                    {
+                      "name": "Sequence Editor"
+                    }
+                  ]
+                },
+                {
+                  "type": 0,
+                  "width": 366,
+                  "height": 409,
+                  "currentContent": "Logger",
+                  "tabs": [
+                    {
+                      "name": "Help"
+                    },
+                    {
+                      "name": "Logger"
+                    },
+                    {
+                      "name": "Warnings"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "windows": null
+  },
+  "modules": {
+    "items": [
+      {
+        "parameters": [
+          {
+            "value": true,
+            "controlAddress": "/logIncoming"
+          }
+        ],
+        "niceName": "MIDI",
+        "type": "MIDI",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "parameters": [
+            {
+              "value": [
+                "1995549307",
+                ""
+              ],
+              "controlAddress": "/devices"
+            }
+          ],
+          "containers": {
+            "pass_through": {
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "values": {
+          "parameters": [
+            {
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 2,
+              "pitchOrNumber": 9,
+              "MIDIType": 0,
+              "controlAddress": "/_2_A_2",
+              "type": "MIDI Value",
+              "niceName": "[2] A-2",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 2 : A-2",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 2,
+              "pitchOrNumber": 10,
+              "MIDIType": 0,
+              "controlAddress": "/_2_A#_2",
+              "type": "MIDI Value",
+              "niceName": "[2] A#-2",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 2 : A#-2",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 2,
+              "pitchOrNumber": 51,
+              "MIDIType": 2,
+              "controlAddress": "/_2_CC51",
+              "type": "MIDI Value",
+              "niceName": "[2] CC51",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 2 : CC51",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 5,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 2,
+              "pitchOrNumber": 61,
+              "MIDIType": 2,
+              "controlAddress": "/_2_CC61",
+              "type": "MIDI Value",
+              "niceName": "[2] CC61",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 2 : CC61",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 9,
+              "pitchOrNumber": 9,
+              "MIDIType": 0,
+              "controlAddress": "/_9_A_2",
+              "type": "MIDI Value",
+              "niceName": "[9] A-2",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 9 : A-2",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 9,
+              "pitchOrNumber": 10,
+              "MIDIType": 0,
+              "controlAddress": "/_9_A#_2",
+              "type": "MIDI Value",
+              "niceName": "[9] A#-2",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 9 : A#-2",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            }
+          ],
+          "containers": {
+            "infos": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/oneNoteOn"
+                },
+                {
+                  "value": 2,
+                  "hexMode": false,
+                  "controlAddress": "/lastChannel"
+                },
+                {
+                  "value": 9,
+                  "hexMode": false,
+                  "controlAddress": "/lastPitch"
+                },
+                {
+                  "value": 127,
+                  "hexMode": false,
+                  "controlAddress": "/lastVelocity"
+                }
+              ]
+            },
+            "tempo": {
+            },
+            "mtc": {
+            }
+          }
+        }
+      },
+      {
+        "niceName": "OscDoor",
+        "type": "OSCQuery",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "parameters": [
+            {
+              "value": "td_osc_door",
+              "controlAddress": "/serverName"
+            },
+            {
+              "value": true,
+              "controlAddress": "/isConnected"
+            }
+          ],
+          "containers": {
+            "output": {
+              "parameters": [
+                {
+                  "value": "127.0.0.1",
+                  "controlAddress": "/remoteHost"
+                },
+                {
+                  "value": 9000,
+                  "hexMode": false,
+                  "controlAddress": "/remotePort"
+                },
+                {
+                  "value": 9000,
+                  "hexMode": false,
+                  "controlAddress": "/customOSCPort",
+                  "enabled": false
+                },
+                {
+                  "value": 9000,
+                  "hexMode": false,
+                  "controlAddress": "/customWebsocketPort",
+                  "enabled": false
+                }
+              ]
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "values": {
+          "containers": {
+            "sceneCtrl": {
+              "containers": {
+                "Custom": {
+                  "parameters": [
+                    {
+                      "value": false,
+                      "controlAddress": "/listen"
+                    },
+                    {
+                      "value": "wobbly",
+                      "controlAddress": "/Scene"
+                    },
+                    {
+                      "value": 0.6805574893951416,
+                      "controlAddress": "/Fadetime"
+                    }
+                  ],
+                  "owned": true,
+                  "niceName": "Custom"
+                }
+              },
+              "owned": true,
+              "niceName": "sceneCtrl"
+            }
+          }
+        },
+        "treeData": {
+          "DESCRIPTION": "td_osc_door",
+          "CONTENTS": {
+            "sceneCtrl": {
+              "CONTENTS": {
+                "Custom": {
+                  "CONTENTS": {
+                    "Scene": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "Scene",
+                      "FULL_PATH": "/sceneCtrl/Custom/Scene",
+                      "VALUE": [
+                        "wobbly"
+                      ],
+                      "RANGE": [
+                        {
+                          "VALS": [
+                            "basic",
+                            "flames",
+                            "wobbly"
+                          ]
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Fadetime": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Fadetime",
+                      "FULL_PATH": "/sceneCtrl/Custom/Fadetime",
+                      "VALUE": [
+                        0.3400000035762787
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 10.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "hasListenExtension": true
+      }
+    ],
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  },
+  "customVariables": {
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  },
+  "states": {
+    "parameters": [
+      {
+        "value": 20,
+        "hexMode": false,
+        "controlAddress": "/snapGridSize"
+      }
+    ],
+    "items": [
+      {
+        "parameters": [
+          {
+            "value": true,
+            "controlAddress": "/enabled"
+          },
+          {
+            "value": false,
+            "controlAddress": "/miniMode"
+          },
+          {
+            "value": [
+              -417.0,
+              -159.0
+            ],
+            "controlAddress": "/viewUIPosition"
+          },
+          {
+            "value": [
+              453.0,
+              383.0
+            ],
+            "controlAddress": "/viewUISize"
+          },
+          {
+            "value": true,
+            "controlAddress": "/active"
+          }
+        ],
+        "niceName": "State",
+        "type": "State",
+        "processors": {
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 24.0,
+                  "controlAddress": "/listSize"
+                },
+                {
+                  "value": 1,
+                  "hexMode": false,
+                  "controlAddress": "/nextCue"
+                },
+                {
+                  "value": true,
+                  "controlAddress": "/loop"
+                }
+              ],
+              "niceName": "Conductor",
+              "editorIsCollapsed": true,
+              "containers": {
+                "scripts": {
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                },
+                "conditions": {
+                  "items": [
+                    {
+                      "parameters": [
+                        {
+                          "value": "/modules/midi/values/_2_A_2",
+                          "controlAddress": "/inputValue"
+                        }
+                      ],
+                      "niceName": "From Input Value",
+                      "type": "From Input Value",
+                      "comparator": {
+                        "parameters": [
+                          {
+                            "value": 127,
+                            "hexMode": false,
+                            "controlAddress": "/reference"
+                          }
+                        ],
+                        "hideInEditor": true
+                      }
+                    }
+                  ],
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                },
+                "consequencesTRUE": {
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                },
+                "consequencesFALSE": {
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                },
+                "uiSettings": {
+                },
+                "processors": {
+                  "hideInEditor": true,
+                  "items": [
+                    {
+                      "niceName": "basic",
+                      "editorIsCollapsed": true,
+                      "type": "Cue",
+                      "conditions": {
+                        "items": [
+                          {
+                            "parameters": [
+                              {
+                                "value": "",
+                                "controlAddress": "/inputValue"
+                              }
+                            ],
+                            "niceName": "From Input Value",
+                            "type": "From Input Value"
+                          }
+                        ],
+                        "viewOffset": [
+                          0,
+                          0
+                        ],
+                        "viewZoom": 1.0
+                      },
+                      "consequences": {
+                        "items": [
+                          {
+                            "niceName": "Consequence",
+                            "type": "Consequence",
+                            "commandModule": "oscDoor",
+                            "commandPath": "",
+                            "commandType": "Set Value",
+                            "command": {
+                              "parameters": [
+                                {
+                                  "value": "/sceneCtrl/Custom/Scene",
+                                  "controlAddress": "/target"
+                                },
+                                {
+                                  "value": "All",
+                                  "controlAddress": "/component"
+                                },
+                                {
+                                  "value": "Equals",
+                                  "controlAddress": "/operator"
+                                }
+                              ],
+                              "paramLinks": {
+                              }
+                            }
+                          }
+                        ],
+                        "viewOffset": [
+                          0,
+                          0
+                        ],
+                        "viewZoom": 1.0
+                      },
+                      "sequenceLinking": {
+                        "parameters": [
+                          {
+                            "value": "",
+                            "controlAddress": "/linkedSequence"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "niceName": "Cue",
+                      "editorIsCollapsed": true,
+                      "type": "Cue",
+                      "conditions": {
+                        "items": [
+                          {
+                            "parameters": [
+                              {
+                                "value": "",
+                                "controlAddress": "/inputValue"
+                              }
+                            ],
+                            "niceName": "From Input Value",
+                            "type": "From Input Value"
+                          }
+                        ],
+                        "viewOffset": [
+                          0,
+                          0
+                        ],
+                        "viewZoom": 1.0
+                      },
+                      "consequences": {
+                        "items": [
+                          {
+                            "niceName": "Consequence",
+                            "type": "Consequence",
+                            "commandModule": "oscDoor",
+                            "commandPath": "",
+                            "commandType": "Set Value",
+                            "command": {
+                              "parameters": [
+                                {
+                                  "value": "/sceneCtrl/Custom/Scene",
+                                  "controlAddress": "/target"
+                                },
+                                {
+                                  "value": "All",
+                                  "controlAddress": "/component"
+                                },
+                                {
+                                  "value": "Equals",
+                                  "controlAddress": "/operator"
+                                },
+                                {
+                                  "value": "flames",
+                                  "controlAddress": "/value"
+                                }
+                              ],
+                              "paramLinks": {
+                              }
+                            }
+                          }
+                        ],
+                        "viewOffset": [
+                          0,
+                          0
+                        ],
+                        "viewZoom": 1.0
+                      },
+                      "sequenceLinking": {
+                        "parameters": [
+                          {
+                            "value": "",
+                            "controlAddress": "/linkedSequence"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "niceName": "Cue 1",
+                      "editorIsCollapsed": true,
+                      "type": "Cue",
+                      "conditions": {
+                        "items": [
+                          {
+                            "parameters": [
+                              {
+                                "value": "",
+                                "controlAddress": "/inputValue"
+                              }
+                            ],
+                            "niceName": "From Input Value",
+                            "type": "From Input Value"
+                          }
+                        ],
+                        "viewOffset": [
+                          0,
+                          0
+                        ],
+                        "viewZoom": 1.0
+                      },
+                      "consequences": {
+                        "items": [
+                          {
+                            "niceName": "Consequence",
+                            "type": "Consequence",
+                            "commandModule": "oscDoor",
+                            "commandPath": "",
+                            "commandType": "Set Value",
+                            "command": {
+                              "parameters": [
+                                {
+                                  "value": "/sceneCtrl/Custom/Scene",
+                                  "controlAddress": "/target"
+                                },
+                                {
+                                  "value": "All",
+                                  "controlAddress": "/component"
+                                },
+                                {
+                                  "value": "Equals",
+                                  "controlAddress": "/operator"
+                                },
+                                {
+                                  "value": "wobbly",
+                                  "controlAddress": "/value"
+                                }
+                              ],
+                              "paramLinks": {
+                              }
+                            }
+                          }
+                        ],
+                        "viewOffset": [
+                          0,
+                          0
+                        ],
+                        "viewZoom": 1.0
+                      },
+                      "sequenceLinking": {
+                        "parameters": [
+                          {
+                            "value": "",
+                            "controlAddress": "/linkedSequence"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                }
+              },
+              "type": "Conductor",
+              "scripts": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      }
+    ],
+    "viewOffset": [
+      124,
+      -82
+    ],
+    "viewZoom": 1.0,
+    "transitions": {
+      "hideInEditor": true,
+      "viewOffset": [
+        0,
+        0
+      ],
+      "viewZoom": 1.0
+    },
+    "comments": {
+      "hideInEditor": true,
+      "viewOffset": [
+        124,
+        -82
+      ],
+      "viewZoom": 1.0
+    }
+  },
+  "sequences": {
+    "items": [
+      {
+        "parameters": [
+          {
+            "value": 0.2604923248291016,
+            "controlAddress": "/viewStartTime"
+          },
+          {
+            "value": 30.0,
+            "controlAddress": "/viewEndTime"
+          },
+          {
+            "value": "",
+            "controlAddress": "/ltcSyncModule",
+            "enabled": false
+          }
+        ],
+        "niceName": "Sequence",
+        "type": "Sequence",
+        "layers": {
+          "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": true,
+                  "controlAddress": "/enabled"
+                },
+                {
+                  "value": 134.0,
+                  "controlAddress": "/listSize"
+                },
+                {
+                  "value": 134,
+                  "hexMode": false,
+                  "controlAddress": "/uiHeight"
+                }
+              ],
+              "niceName": "Mapping",
+              "containers": {
+                "automation": {
+                  "parameters": [
+                    {
+                      "value": 30.0,
+                      "controlAddress": "/length"
+                    },
+                    {
+                      "value": 0.0,
+                      "controlAddress": "/position"
+                    },
+                    {
+                      "value": [
+                        0.0,
+                        1.0
+                      ],
+                      "controlAddress": "/viewValueRange"
+                    },
+                    {
+                      "value": [
+                        0.0,
+                        1.0
+                      ],
+                      "controlAddress": "/range",
+                      "enabled": true
+                    }
+                  ],
+                  "hideInEditor": true,
+                  "hideInRemoteControl": false,
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                },
+                "recorder": {
+                  "parameters": [
+                    {
+                      "value": "",
+                      "controlAddress": "/inputValue"
+                    },
+                    {
+                      "value": false,
+                      "controlAddress": "/arm"
+                    }
+                  ],
+                  "editorIsCollapsed": true
+                },
+                "mapping": {
+                  "niceName": "Mapping",
+                  "type": "Mapping",
+                  "im": {
+                    "hideInEditor": true,
+                    "items": [
+                      {
+                        "parameters": [
+                          {
+                            "value": "",
+                            "controlAddress": "/inputValue"
+                          }
+                        ],
+                        "niceName": "Input Value",
+                        "type": "Input Value"
+                      }
+                    ],
+                    "viewOffset": [
+                      0,
+                      0
+                    ],
+                    "viewZoom": 1.0
+                  },
+                  "params": {
+                    "parameters": [
+                      {
+                        "value": 50,
+                        "hexMode": false,
+                        "controlAddress": "/updateRate"
+                      },
+                      {
+                        "value": false,
+                        "controlAddress": "/sendOnOutputChangeOnly"
+                      }
+                    ],
+                    "editorIsCollapsed": true
+                  },
+                  "filters": {
+                    "viewOffset": [
+                      0,
+                      0
+                    ],
+                    "viewZoom": 1.0
+                  },
+                  "outputs": {
+                    "viewOffset": [
+                      0,
+                      0
+                    ],
+                    "viewZoom": 1.0
+                  }
+                }
+              },
+              "type": "Mapping"
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "cues": {
+          "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 1.419999957084656,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "Pause",
+                  "controlAddress": "/actionOnCue"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "Cue",
+              "containers": {
+                "conditions": {
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                }
+              },
+              "type": "BaseItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/locked"
+                },
+                {
+                  "value": 4.519999980926514,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "Pause",
+                  "controlAddress": "/actionOnCue"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "Cue 1",
+              "containers": {
+                "conditions": {
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                }
+              },
+              "type": "BaseItem"
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "editing": true
+      }
+    ],
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  },
+  "routers": {
+    "items": [
+      {
+        "niceName": "Router",
+        "type": "BaseItem",
+        "sourceModule": "customVariables",
+        "sourceValues": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      }
+    ],
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  }
+}
