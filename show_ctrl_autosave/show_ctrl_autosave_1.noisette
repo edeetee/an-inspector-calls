@@ -19,6 +19,12 @@
     }
   },
   "dashboardManager": {
+    "parameters": [
+      {
+        "value": true,
+        "controlAddress": "/editMode"
+      }
+    ],
     "items": [
       {
         "niceName": "Dashboard",
@@ -61,8 +67,8 @@
             }
           ],
           "viewOffset": [
-            -242,
-            -208
+            -91,
+            -330
           ],
           "viewZoom": 1.0
         },
@@ -133,7 +139,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 895,
+                  "width": 772,
                   "height": 658,
                   "currentContent": "State Machine",
                   "tabs": [
@@ -153,7 +159,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 364,
+                  "width": 487,
                   "height": 658,
                   "currentContent": "Inspector",
                   "tabs": [
@@ -220,12 +226,6 @@
   "modules": {
     "items": [
       {
-        "parameters": [
-          {
-            "value": true,
-            "controlAddress": "/logIncoming"
-          }
-        ],
         "niceName": "MIDI",
         "type": "MIDI",
         "scripts": {
@@ -260,7 +260,6 @@
         "values": {
           "parameters": [
             {
-              "value": 0,
               "minValue": 0,
               "maxValue": 127,
               "default": 0,
@@ -278,7 +277,6 @@
               "feedbackOnly": false
             },
             {
-              "value": 0,
               "minValue": 0,
               "maxValue": 127,
               "default": 0,
@@ -297,6 +295,23 @@
             },
             {
               "value": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 2,
+              "pitchOrNumber": 28,
+              "MIDIType": 0,
+              "controlAddress": "/_2_E0",
+              "type": "MIDI Value",
+              "niceName": "[2] E0",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 2 : E0",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
               "minValue": 0,
               "maxValue": 127,
               "default": 0,
@@ -337,6 +352,41 @@
               "maxValue": 127,
               "default": 0,
               "hexMode": false,
+              "channel": 2,
+              "pitchOrNumber": 116,
+              "MIDIType": 2,
+              "controlAddress": "/_2_CC116",
+              "type": "MIDI Value",
+              "niceName": "[2] CC116",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 2 : CC116",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 2,
+              "pitchOrNumber": 117,
+              "MIDIType": 2,
+              "controlAddress": "/_2_CC117",
+              "type": "MIDI Value",
+              "niceName": "[2] CC117",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 2 : CC117",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
               "channel": 9,
               "pitchOrNumber": 9,
               "MIDIType": 0,
@@ -350,7 +400,6 @@
               "feedbackOnly": false
             },
             {
-              "value": 0,
               "minValue": 0,
               "maxValue": 127,
               "default": 0,
@@ -381,7 +430,7 @@
                   "controlAddress": "/lastChannel"
                 },
                 {
-                  "value": 9,
+                  "value": 28,
                   "hexMode": false,
                   "controlAddress": "/lastPitch"
                 },
@@ -395,6 +444,40 @@
             "tempo": {
             },
             "mtc": {
+            }
+          }
+        }
+      },
+      {
+        "niceName": "OS",
+        "type": "OS",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "containers": {
+            "appControl": {
+            },
+            "pingIPs": {
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "values": {
+          "containers": {
+            "osInfos": {
+            },
+            "networkInfos": {
             }
           }
         }
@@ -462,16 +545,8 @@
                 "Custom": {
                   "parameters": [
                     {
-                      "value": false,
-                      "controlAddress": "/listen"
-                    },
-                    {
                       "value": "wobbly",
                       "controlAddress": "/Scene"
-                    },
-                    {
-                      "value": 0.6805574893951416,
-                      "controlAddress": "/Fadetime"
                     }
                   ],
                   "owned": true,
@@ -495,7 +570,7 @@
                       "DESCRIPTION": "Scene",
                       "FULL_PATH": "/sceneCtrl/Custom/Scene",
                       "VALUE": [
-                        "wobbly"
+                        "flames"
                       ],
                       "RANGE": [
                         {
@@ -513,7 +588,7 @@
                       "DESCRIPTION": "Fadetime",
                       "FULL_PATH": "/sceneCtrl/Custom/Fadetime",
                       "VALUE": [
-                        0.3400000035762787
+                        0.680557
                       ],
                       "RANGE": [
                         {
@@ -529,7 +604,787 @@
             }
           }
         },
-        "hasListenExtension": true
+        "hasListenExtension": false
+      },
+      {
+        "niceName": "OscPics",
+        "type": "OSCQuery",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "parameters": [
+            {
+              "value": "td_osc_door",
+              "controlAddress": "/serverName"
+            },
+            {
+              "value": true,
+              "controlAddress": "/isConnected"
+            }
+          ],
+          "containers": {
+            "output": {
+              "parameters": [
+                {
+                  "value": "127.0.0.1",
+                  "controlAddress": "/remoteHost"
+                },
+                {
+                  "value": 9001,
+                  "hexMode": false,
+                  "controlAddress": "/remotePort"
+                },
+                {
+                  "value": 9001,
+                  "hexMode": false,
+                  "controlAddress": "/customOSCPort",
+                  "enabled": false
+                },
+                {
+                  "value": 9001,
+                  "hexMode": false,
+                  "controlAddress": "/customWebsocketPort",
+                  "enabled": false
+                }
+              ]
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "values": {
+          "containers": {
+            "footageSelector1": {
+              "editorIsCollapsed": true,
+              "containers": {
+                "Custom": {
+                  "parameters": [
+                    {
+                      "value": "1 - Conquer by the clock",
+                      "controlAddress": "/File"
+                    }
+                  ],
+                  "editorIsCollapsed": true,
+                  "owned": true,
+                  "niceName": "Custom"
+                }
+              },
+              "owned": true,
+              "niceName": "footageSelector1"
+            },
+            "footageSelector2": {
+              "editorIsCollapsed": true,
+              "containers": {
+                "Custom": {
+                  "parameters": [
+                    {
+                      "value": "1 - Conquer by the clock",
+                      "controlAddress": "/File"
+                    }
+                  ],
+                  "editorIsCollapsed": true,
+                  "owned": true,
+                  "niceName": "Custom"
+                }
+              },
+              "owned": true,
+              "niceName": "footageSelector2"
+            }
+          }
+        },
+        "treeData": {
+          "DESCRIPTION": "td_osc_door",
+          "CONTENTS": {
+            "footageSelector1": {
+              "CONTENTS": {
+                "Custom": {
+                  "CONTENTS": {
+                    "File": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "File",
+                      "FULL_PATH": "/footageSelector1/Custom/File",
+                      "VALUE": [
+                        "1 - Conquer by the clock"
+                      ],
+                      "RANGE": [
+                        {
+                          "VALS": [
+                            "1 - Conquer by the clock",
+                            "2 - What time is it",
+                            "3 - Snooze alarm clocks",
+                            "4 - Clocks and Arieals",
+                            "5 - The Year was 1912",
+                            "6 - We work again",
+                            "7 - Colourised war footage",
+                            "8 - Fake titanic footage",
+                            "9 - Women at work",
+                            "10 - Milwards",
+                            "11 - The Thames",
+                            "12 - fairground rides",
+                            "13 - is it love",
+                            "14 - more memories",
+                            "15 - street scenes",
+                            "16 - some seaside place",
+                            "17 - An Inspector Calls",
+                            "18 - Women Working"
+                          ]
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Timecodes": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "Timecodes",
+                      "FULL_PATH": "/footageSelector1/Custom/Timecodes",
+                      "VALUE": [
+                        "00:35-00:37 10:25-10:35 0:5-0:10"
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Randomize": {
+                      "TYPE": "F",
+                      "DESCRIPTION": "Randomize",
+                      "FULL_PATH": "/footageSelector1/Custom/Randomize",
+                      "VALUE": [
+                        false
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1,
+                          "MIN": 0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Next": {
+                      "TYPE": "N",
+                      "DESCRIPTION": "Next",
+                      "FULL_PATH": "/footageSelector1/Custom/Next",
+                      "ACCESS": 3
+                    },
+                    "Current": {
+                      "TYPE": "i",
+                      "DESCRIPTION": "Current",
+                      "FULL_PATH": "/footageSelector1/Custom/Current",
+                      "VALUE": [
+                        0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 1
+                    }
+                  }
+                }
+              }
+            },
+            "footageSelector2": {
+              "CONTENTS": {
+                "Custom": {
+                  "CONTENTS": {
+                    "File": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "File",
+                      "FULL_PATH": "/footageSelector2/Custom/File",
+                      "VALUE": [
+                        "1 - Conquer by the clock"
+                      ],
+                      "RANGE": [
+                        {
+                          "VALS": [
+                            "1 - Conquer by the clock",
+                            "2 - What time is it",
+                            "3 - Snooze alarm clocks",
+                            "4 - Clocks and Arieals",
+                            "5 - The Year was 1912",
+                            "6 - We work again",
+                            "7 - Colourised war footage",
+                            "8 - Fake titanic footage",
+                            "9 - Women at work",
+                            "10 - Milwards",
+                            "11 - The Thames",
+                            "12 - fairground rides",
+                            "13 - is it love",
+                            "14 - more memories",
+                            "15 - street scenes",
+                            "16 - some seaside place",
+                            "17 - An Inspector Calls",
+                            "18 - Women Working"
+                          ]
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Timecodes": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "Timecodes",
+                      "FULL_PATH": "/footageSelector2/Custom/Timecodes",
+                      "VALUE": [
+                        "00:35-00:37 10:25-10:35 0:5-0:10"
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Randomize": {
+                      "TYPE": "F",
+                      "DESCRIPTION": "Randomize",
+                      "FULL_PATH": "/footageSelector2/Custom/Randomize",
+                      "VALUE": [
+                        false
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1,
+                          "MIN": 0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Next": {
+                      "TYPE": "N",
+                      "DESCRIPTION": "Next",
+                      "FULL_PATH": "/footageSelector2/Custom/Next",
+                      "ACCESS": 3
+                    },
+                    "Current": {
+                      "TYPE": "i",
+                      "DESCRIPTION": "Current",
+                      "FULL_PATH": "/footageSelector2/Custom/Current",
+                      "VALUE": [
+                        1
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "hasListenExtension": false
+      },
+      {
+        "parameters": [
+          {
+            "value": false,
+            "controlAddress": "/logOutgoing"
+          }
+        ],
+        "niceName": "OscEntryBg",
+        "type": "OSCQuery",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "parameters": [
+            {
+              "value": "td_osc_entryBg",
+              "controlAddress": "/serverName"
+            },
+            {
+              "value": true,
+              "controlAddress": "/isConnected"
+            }
+          ],
+          "containers": {
+            "output": {
+              "parameters": [
+                {
+                  "value": "127.0.0.1",
+                  "controlAddress": "/remoteHost"
+                },
+                {
+                  "value": 9002,
+                  "hexMode": false,
+                  "controlAddress": "/remotePort"
+                },
+                {
+                  "value": 9002,
+                  "hexMode": false,
+                  "controlAddress": "/customOSCPort",
+                  "enabled": false
+                },
+                {
+                  "value": 9002,
+                  "hexMode": false,
+                  "controlAddress": "/customWebsocketPort",
+                  "enabled": false
+                }
+              ]
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "values": {
+          "containers": {
+            "floatingSelector1": {
+              "editorIsCollapsed": true,
+              "containers": {
+                "Custom": {
+                  "parameters": [
+                    {
+                      "value": "1 - Conquer by the clock",
+                      "controlAddress": "/File"
+                    },
+                    {
+                      "value": "00:36-00:37 10:25-10:35 ",
+                      "controlAddress": "/Timecodes"
+                    }
+                  ],
+                  "editorIsCollapsed": true,
+                  "owned": true,
+                  "niceName": "Custom"
+                }
+              },
+              "owned": true,
+              "niceName": "floatingSelector1"
+            },
+            "floatingSelector2": {
+              "editorIsCollapsed": true,
+              "containers": {
+                "Custom": {
+                  "parameters": [
+                    {
+                      "value": "1 - Conquer by the clock",
+                      "controlAddress": "/File"
+                    },
+                    {
+                      "value": "8:49-8:34",
+                      "controlAddress": "/Timecodes"
+                    }
+                  ],
+                  "editorIsCollapsed": true,
+                  "owned": true,
+                  "niceName": "Custom"
+                }
+              },
+              "owned": true,
+              "niceName": "floatingSelector2"
+            },
+            "floatingSelector3": {
+              "editorIsCollapsed": true,
+              "containers": {
+                "Custom": {
+                  "parameters": [
+                    {
+                      "value": "1 - Conquer by the clock",
+                      "controlAddress": "/File"
+                    },
+                    {
+                      "value": "8:49",
+                      "controlAddress": "/Timecodes"
+                    }
+                  ],
+                  "editorIsCollapsed": true,
+                  "owned": true,
+                  "niceName": "Custom"
+                }
+              },
+              "owned": true,
+              "niceName": "floatingSelector3"
+            },
+            "floatingSelector4": {
+              "editorIsCollapsed": true,
+              "containers": {
+                "Custom": {
+                  "parameters": [
+                    {
+                      "value": "1 - Conquer by the clock",
+                      "controlAddress": "/File"
+                    },
+                    {
+                      "value": "09:05-09:10",
+                      "controlAddress": "/Timecodes"
+                    }
+                  ],
+                  "editorIsCollapsed": true,
+                  "owned": true,
+                  "niceName": "Custom"
+                }
+              },
+              "owned": true,
+              "niceName": "floatingSelector4"
+            }
+          }
+        },
+        "treeData": {
+          "DESCRIPTION": "td_osc_entryBg",
+          "CONTENTS": {
+            "floatingSelector1": {
+              "CONTENTS": {
+                "Custom": {
+                  "CONTENTS": {
+                    "File": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "File",
+                      "FULL_PATH": "/floatingSelector1/Custom/File",
+                      "VALUE": [
+                        "1 - Conquer by the clock"
+                      ],
+                      "RANGE": [
+                        {
+                          "VALS": [
+                            "1 - Conquer by the clock",
+                            "2 - What time is it",
+                            "3 - Snooze alarm clocks",
+                            "4 - Clocks and Arieals",
+                            "5 - The Year was 1912",
+                            "6 - We work again",
+                            "7 - Colourised war footage",
+                            "8 - Fake titanic footage",
+                            "9 - Women at work",
+                            "10 - Milwards",
+                            "11 - The Thames",
+                            "12 - fairground rides",
+                            "13 - is it love",
+                            "14 - more memories",
+                            "15 - street scenes",
+                            "16 - some seaside place",
+                            "17 - An Inspector Calls",
+                            "18 - Women Working"
+                          ]
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Timecodes": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "Timecodes",
+                      "FULL_PATH": "/floatingSelector1/Custom/Timecodes",
+                      "VALUE": [
+                        "00:5-00:10"
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Randomize": {
+                      "TYPE": "F",
+                      "DESCRIPTION": "Randomize",
+                      "FULL_PATH": "/floatingSelector1/Custom/Randomize",
+                      "VALUE": [
+                        false
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1,
+                          "MIN": 0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Next": {
+                      "TYPE": "N",
+                      "DESCRIPTION": "Next",
+                      "FULL_PATH": "/floatingSelector1/Custom/Next",
+                      "ACCESS": 3
+                    },
+                    "Current": {
+                      "TYPE": "i",
+                      "DESCRIPTION": "Current",
+                      "FULL_PATH": "/floatingSelector1/Custom/Current",
+                      "VALUE": [
+                        0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 1
+                    }
+                  }
+                }
+              }
+            },
+            "floatingSelector2": {
+              "CONTENTS": {
+                "Custom": {
+                  "CONTENTS": {
+                    "File": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "File",
+                      "FULL_PATH": "/floatingSelector2/Custom/File",
+                      "VALUE": [
+                        "1 - Conquer by the clock"
+                      ],
+                      "RANGE": [
+                        {
+                          "VALS": [
+                            "1 - Conquer by the clock",
+                            "2 - What time is it",
+                            "3 - Snooze alarm clocks",
+                            "4 - Clocks and Arieals",
+                            "5 - The Year was 1912",
+                            "6 - We work again",
+                            "7 - Colourised war footage",
+                            "8 - Fake titanic footage",
+                            "9 - Women at work",
+                            "10 - Milwards",
+                            "11 - The Thames",
+                            "12 - fairground rides",
+                            "13 - is it love",
+                            "14 - more memories",
+                            "15 - street scenes",
+                            "16 - some seaside place",
+                            "17 - An Inspector Calls",
+                            "18 - Women Working"
+                          ]
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Timecodes": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "Timecodes",
+                      "FULL_PATH": "/floatingSelector2/Custom/Timecodes",
+                      "VALUE": [
+                        "00:5-00:10"
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Randomize": {
+                      "TYPE": "F",
+                      "DESCRIPTION": "Randomize",
+                      "FULL_PATH": "/floatingSelector2/Custom/Randomize",
+                      "VALUE": [
+                        false
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1,
+                          "MIN": 0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Next": {
+                      "TYPE": "N",
+                      "DESCRIPTION": "Next",
+                      "FULL_PATH": "/floatingSelector2/Custom/Next",
+                      "ACCESS": 3
+                    },
+                    "Current": {
+                      "TYPE": "i",
+                      "DESCRIPTION": "Current",
+                      "FULL_PATH": "/floatingSelector2/Custom/Current",
+                      "VALUE": [
+                        0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 1
+                    }
+                  }
+                }
+              }
+            },
+            "floatingSelector3": {
+              "CONTENTS": {
+                "Custom": {
+                  "CONTENTS": {
+                    "File": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "File",
+                      "FULL_PATH": "/floatingSelector3/Custom/File",
+                      "VALUE": [
+                        "1 - Conquer by the clock"
+                      ],
+                      "RANGE": [
+                        {
+                          "VALS": [
+                            "1 - Conquer by the clock",
+                            "2 - What time is it",
+                            "3 - Snooze alarm clocks",
+                            "4 - Clocks and Arieals",
+                            "5 - The Year was 1912",
+                            "6 - We work again",
+                            "7 - Colourised war footage",
+                            "8 - Fake titanic footage",
+                            "9 - Women at work",
+                            "10 - Milwards",
+                            "11 - The Thames",
+                            "12 - fairground rides",
+                            "13 - is it love",
+                            "14 - more memories",
+                            "15 - street scenes",
+                            "16 - some seaside place",
+                            "17 - An Inspector Calls",
+                            "18 - Women Working"
+                          ]
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Timecodes": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "Timecodes",
+                      "FULL_PATH": "/floatingSelector3/Custom/Timecodes",
+                      "VALUE": [
+                        "00:5-00:10"
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Randomize": {
+                      "TYPE": "F",
+                      "DESCRIPTION": "Randomize",
+                      "FULL_PATH": "/floatingSelector3/Custom/Randomize",
+                      "VALUE": [
+                        false
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1,
+                          "MIN": 0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Next": {
+                      "TYPE": "N",
+                      "DESCRIPTION": "Next",
+                      "FULL_PATH": "/floatingSelector3/Custom/Next",
+                      "ACCESS": 3
+                    },
+                    "Current": {
+                      "TYPE": "i",
+                      "DESCRIPTION": "Current",
+                      "FULL_PATH": "/floatingSelector3/Custom/Current",
+                      "VALUE": [
+                        0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 1
+                    }
+                  }
+                }
+              }
+            },
+            "floatingSelector4": {
+              "CONTENTS": {
+                "Custom": {
+                  "CONTENTS": {
+                    "File": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "File",
+                      "FULL_PATH": "/floatingSelector4/Custom/File",
+                      "VALUE": [
+                        "1 - Conquer by the clock"
+                      ],
+                      "RANGE": [
+                        {
+                          "VALS": [
+                            "1 - Conquer by the clock",
+                            "2 - What time is it",
+                            "3 - Snooze alarm clocks",
+                            "4 - Clocks and Arieals",
+                            "5 - The Year was 1912",
+                            "6 - We work again",
+                            "7 - Colourised war footage",
+                            "8 - Fake titanic footage",
+                            "9 - Women at work",
+                            "10 - Milwards",
+                            "11 - The Thames",
+                            "12 - fairground rides",
+                            "13 - is it love",
+                            "14 - more memories",
+                            "15 - street scenes",
+                            "16 - some seaside place",
+                            "17 - An Inspector Calls",
+                            "18 - Women Working"
+                          ]
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Timecodes": {
+                      "TYPE": "s",
+                      "DESCRIPTION": "Timecodes",
+                      "FULL_PATH": "/floatingSelector4/Custom/Timecodes",
+                      "VALUE": [
+                        "00:5-00:10"
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Randomize": {
+                      "TYPE": "F",
+                      "DESCRIPTION": "Randomize",
+                      "FULL_PATH": "/floatingSelector4/Custom/Randomize",
+                      "VALUE": [
+                        false
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1,
+                          "MIN": 0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Next": {
+                      "TYPE": "N",
+                      "DESCRIPTION": "Next",
+                      "FULL_PATH": "/floatingSelector4/Custom/Next",
+                      "ACCESS": 3
+                    },
+                    "Current": {
+                      "TYPE": "i",
+                      "DESCRIPTION": "Current",
+                      "FULL_PATH": "/floatingSelector4/Custom/Current",
+                      "VALUE": [
+                        0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "hasListenExtension": false
       }
     ],
     "viewOffset": [
@@ -546,337 +1401,306 @@
     "viewZoom": 1.0
   },
   "states": {
-    "parameters": [
-      {
-        "value": 20,
-        "hexMode": false,
-        "controlAddress": "/snapGridSize"
-      }
-    ],
     "items": [
       {
         "parameters": [
           {
-            "value": true,
-            "controlAddress": "/enabled"
-          },
-          {
-            "value": false,
-            "controlAddress": "/miniMode"
-          },
-          {
             "value": [
               -417.0,
-              -159.0
+              -406.0
             ],
             "controlAddress": "/viewUIPosition"
-          },
-          {
-            "value": [
-              453.0,
-              383.0
-            ],
-            "controlAddress": "/viewUISize"
           },
           {
             "value": true,
             "controlAddress": "/active"
           }
         ],
-        "niceName": "State",
+        "niceName": "SeqCTRL",
         "type": "State",
         "processors": {
           "items": [
             {
-              "parameters": [
-                {
-                  "value": 24.0,
-                  "controlAddress": "/listSize"
-                },
-                {
-                  "value": 1,
-                  "hexMode": false,
-                  "controlAddress": "/nextCue"
-                },
-                {
-                  "value": true,
-                  "controlAddress": "/loop"
-                }
-              ],
-              "niceName": "Conductor",
+              "niceName": "prev",
               "editorIsCollapsed": true,
-              "containers": {
-                "scripts": {
-                  "viewOffset": [
-                    0,
-                    0
-                  ],
-                  "viewZoom": 1.0
-                },
-                "conditions": {
-                  "items": [
-                    {
+              "type": "Action",
+              "conditions": {
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "/modules/midi/values/_2_CC116",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "From Input Value",
+                    "type": "From Input Value",
+                    "comparator": {
                       "parameters": [
                         {
-                          "value": "/modules/midi/values/_2_A_2",
-                          "controlAddress": "/inputValue"
+                          "value": 127,
+                          "hexMode": false,
+                          "controlAddress": "/reference"
                         }
                       ],
-                      "niceName": "From Input Value",
-                      "type": "From Input Value",
-                      "comparator": {
-                        "parameters": [
-                          {
-                            "value": 127,
-                            "hexMode": false,
-                            "controlAddress": "/reference"
-                          }
-                        ],
-                        "hideInEditor": true
-                      }
+                      "hideInEditor": true
                     }
-                  ],
-                  "viewOffset": [
-                    0,
-                    0
-                  ],
-                  "viewZoom": 1.0
-                },
-                "consequencesTRUE": {
-                  "viewOffset": [
-                    0,
-                    0
-                  ],
-                  "viewZoom": 1.0
-                },
-                "consequencesFALSE": {
-                  "viewOffset": [
-                    0,
-                    0
-                  ],
-                  "viewZoom": 1.0
-                },
-                "uiSettings": {
-                },
-                "processors": {
-                  "hideInEditor": true,
-                  "items": [
-                    {
-                      "niceName": "basic",
-                      "editorIsCollapsed": true,
-                      "type": "Cue",
-                      "conditions": {
-                        "items": [
-                          {
-                            "parameters": [
-                              {
-                                "value": "",
-                                "controlAddress": "/inputValue"
-                              }
-                            ],
-                            "niceName": "From Input Value",
-                            "type": "From Input Value"
-                          }
-                        ],
-                        "viewOffset": [
-                          0,
-                          0
-                        ],
-                        "viewZoom": 1.0
-                      },
-                      "consequences": {
-                        "items": [
-                          {
-                            "niceName": "Consequence",
-                            "type": "Consequence",
-                            "commandModule": "oscDoor",
-                            "commandPath": "",
-                            "commandType": "Set Value",
-                            "command": {
-                              "parameters": [
-                                {
-                                  "value": "/sceneCtrl/Custom/Scene",
-                                  "controlAddress": "/target"
-                                },
-                                {
-                                  "value": "All",
-                                  "controlAddress": "/component"
-                                },
-                                {
-                                  "value": "Equals",
-                                  "controlAddress": "/operator"
-                                }
-                              ],
-                              "paramLinks": {
-                              }
-                            }
-                          }
-                        ],
-                        "viewOffset": [
-                          0,
-                          0
-                        ],
-                        "viewZoom": 1.0
-                      },
-                      "sequenceLinking": {
-                        "parameters": [
-                          {
-                            "value": "",
-                            "controlAddress": "/linkedSequence"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "niceName": "Cue",
-                      "editorIsCollapsed": true,
-                      "type": "Cue",
-                      "conditions": {
-                        "items": [
-                          {
-                            "parameters": [
-                              {
-                                "value": "",
-                                "controlAddress": "/inputValue"
-                              }
-                            ],
-                            "niceName": "From Input Value",
-                            "type": "From Input Value"
-                          }
-                        ],
-                        "viewOffset": [
-                          0,
-                          0
-                        ],
-                        "viewZoom": 1.0
-                      },
-                      "consequences": {
-                        "items": [
-                          {
-                            "niceName": "Consequence",
-                            "type": "Consequence",
-                            "commandModule": "oscDoor",
-                            "commandPath": "",
-                            "commandType": "Set Value",
-                            "command": {
-                              "parameters": [
-                                {
-                                  "value": "/sceneCtrl/Custom/Scene",
-                                  "controlAddress": "/target"
-                                },
-                                {
-                                  "value": "All",
-                                  "controlAddress": "/component"
-                                },
-                                {
-                                  "value": "Equals",
-                                  "controlAddress": "/operator"
-                                },
-                                {
-                                  "value": "flames",
-                                  "controlAddress": "/value"
-                                }
-                              ],
-                              "paramLinks": {
-                              }
-                            }
-                          }
-                        ],
-                        "viewOffset": [
-                          0,
-                          0
-                        ],
-                        "viewZoom": 1.0
-                      },
-                      "sequenceLinking": {
-                        "parameters": [
-                          {
-                            "value": "",
-                            "controlAddress": "/linkedSequence"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "niceName": "Cue 1",
-                      "editorIsCollapsed": true,
-                      "type": "Cue",
-                      "conditions": {
-                        "items": [
-                          {
-                            "parameters": [
-                              {
-                                "value": "",
-                                "controlAddress": "/inputValue"
-                              }
-                            ],
-                            "niceName": "From Input Value",
-                            "type": "From Input Value"
-                          }
-                        ],
-                        "viewOffset": [
-                          0,
-                          0
-                        ],
-                        "viewZoom": 1.0
-                      },
-                      "consequences": {
-                        "items": [
-                          {
-                            "niceName": "Consequence",
-                            "type": "Consequence",
-                            "commandModule": "oscDoor",
-                            "commandPath": "",
-                            "commandType": "Set Value",
-                            "command": {
-                              "parameters": [
-                                {
-                                  "value": "/sceneCtrl/Custom/Scene",
-                                  "controlAddress": "/target"
-                                },
-                                {
-                                  "value": "All",
-                                  "controlAddress": "/component"
-                                },
-                                {
-                                  "value": "Equals",
-                                  "controlAddress": "/operator"
-                                },
-                                {
-                                  "value": "wobbly",
-                                  "controlAddress": "/value"
-                                }
-                              ],
-                              "paramLinks": {
-                              }
-                            }
-                          }
-                        ],
-                        "viewOffset": [
-                          0,
-                          0
-                        ],
-                        "viewZoom": 1.0
-                      },
-                      "sequenceLinking": {
-                        "parameters": [
-                          {
-                            "value": "",
-                            "controlAddress": "/linkedSequence"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "viewOffset": [
-                    0,
-                    0
-                  ],
-                  "viewZoom": 1.0
-                }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
               },
-              "type": "Conductor",
-              "scripts": {
+              "consequences": {
+                "items": [
+                  {
+                    "niceName": "Consequence",
+                    "type": "Consequence",
+                    "commandModule": "sequences",
+                    "commandPath": "Time",
+                    "commandType": "Go to prev cue",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "/sequences/sequence",
+                          "controlAddress": "/target"
+                        },
+                        {
+                          "value": true,
+                          "controlAddress": "/play"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            },
+            {
+              "niceName": "skip if playing",
+              "editorIsCollapsed": true,
+              "type": "Action",
+              "conditions": {
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "/modules/midi/values/_2_CC117",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "From Input Value",
+                    "type": "From Input Value",
+                    "comparator": {
+                      "parameters": [
+                        {
+                          "value": 127,
+                          "hexMode": false,
+                          "controlAddress": "/reference"
+                        }
+                      ],
+                      "hideInEditor": true
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequences": {
+                "items": [
+                  {
+                    "niceName": "Consequence",
+                    "type": "Consequence",
+                    "commandModule": "sequences",
+                    "commandPath": "Time",
+                    "commandType": "Go to next cue",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "/sequences/sequence",
+                          "controlAddress": "/target"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            },
+            {
+              "niceName": "next",
+              "editorIsCollapsed": true,
+              "type": "Action",
+              "conditions": {
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": "/modules/midi/values/_2_E0",
+                        "controlAddress": "/inputValue"
+                      }
+                    ],
+                    "niceName": "From Input Value",
+                    "type": "From Input Value",
+                    "comparator": {
+                      "parameters": [
+                        {
+                          "value": 127,
+                          "hexMode": false,
+                          "controlAddress": "/reference"
+                        }
+                      ],
+                      "hideInEditor": true
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequences": {
+                "items": [
+                  {
+                    "niceName": "Consequence",
+                    "type": "Consequence",
+                    "commandModule": "sequences",
+                    "commandPath": "Playback",
+                    "commandType": "Play Sequence",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "/sequences/sequence",
+                          "controlAddress": "/target"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      },
+      {
+        "parameters": [
+          {
+            "value": [
+              -417.0,
+              -663.0
+            ],
+            "controlAddress": "/viewUIPosition"
+          },
+          {
+            "value": [
+              0.0,
+              0.4000000059604645,
+              0.01568627543747425,
+              1.0
+            ],
+            "controlAddress": "/color"
+          },
+          {
+            "value": true,
+            "controlAddress": "/active"
+          },
+          {
+            "value": "Activate",
+            "controlAddress": "/onLoadBehavior"
+          }
+        ],
+        "niceName": "START",
+        "type": "State",
+        "processors": {
+          "items": [
+            {
+              "niceName": "Action",
+              "type": "Action",
+              "conditions": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequences": {
+                "items": [
+                  {
+                    "niceName": "Consequence",
+                    "type": "Consequence",
+                    "commandModule": "os",
+                    "commandPath": "Process",
+                    "commandType": "Open File",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "an_inspector_calls_previs.toe",
+                          "controlAddress": "/target"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
                 "viewOffset": [
                   0,
                   0
@@ -894,8 +1718,8 @@
       }
     ],
     "viewOffset": [
-      112,
-      -1
+      144,
+      451
     ],
     "viewZoom": 1.0,
     "transitions": {
@@ -909,8 +1733,8 @@
     "comments": {
       "hideInEditor": true,
       "viewOffset": [
-        112,
-        -1
+        144,
+        451
       ],
       "viewZoom": 1.0
     }
@@ -920,11 +1744,15 @@
       {
         "parameters": [
           {
-            "value": 0.2604923248291016,
+            "value": true,
+            "controlAddress": "/autoSnap"
+          },
+          {
+            "value": 0.0,
             "controlAddress": "/viewStartTime"
           },
           {
-            "value": 30.0,
+            "value": 6.611083030700684,
             "controlAddress": "/viewEndTime"
           },
           {
@@ -941,122 +1769,1851 @@
             {
               "parameters": [
                 {
-                  "value": true,
-                  "controlAddress": "/enabled"
-                },
-                {
-                  "value": 134.0,
+                  "value": 199.0,
                   "controlAddress": "/listSize"
                 },
                 {
-                  "value": 134,
+                  "value": 199,
                   "hexMode": false,
                   "controlAddress": "/uiHeight"
                 }
               ],
-              "niceName": "Mapping",
-              "containers": {
-                "automation": {
-                  "parameters": [
-                    {
-                      "value": 30.0,
-                      "controlAddress": "/length"
-                    },
-                    {
-                      "value": 0.0,
-                      "controlAddress": "/position"
-                    },
-                    {
-                      "value": [
-                        0.0,
-                        1.0
-                      ],
-                      "controlAddress": "/viewValueRange"
-                    },
-                    {
-                      "value": [
-                        0.0,
-                        1.0
-                      ],
-                      "controlAddress": "/range",
-                      "enabled": true
-                    }
-                  ],
-                  "hideInEditor": true,
-                  "hideInRemoteControl": false,
-                  "viewOffset": [
-                    0,
-                    0
-                  ],
-                  "viewZoom": 1.0
-                },
-                "recorder": {
-                  "parameters": [
-                    {
-                      "value": "",
-                      "controlAddress": "/inputValue"
-                    },
-                    {
-                      "value": false,
-                      "controlAddress": "/arm"
-                    }
-                  ],
-                  "editorIsCollapsed": true
-                },
-                "mapping": {
-                  "niceName": "Mapping",
-                  "type": "Mapping",
-                  "im": {
-                    "hideInEditor": true,
-                    "items": [
-                      {
-                        "parameters": [
-                          {
-                            "value": "",
-                            "controlAddress": "/inputValue"
-                          }
-                        ],
-                        "niceName": "Input Value",
-                        "type": "Input Value"
-                      }
-                    ],
-                    "viewOffset": [
-                      0,
-                      0
-                    ],
-                    "viewZoom": 1.0
-                  },
-                  "params": {
+              "niceName": "Trigger",
+              "type": "Trigger",
+              "triggers": {
+                "hideInEditor": true,
+                "items": [
+                  {
                     "parameters": [
                       {
-                        "value": 50,
-                        "hexMode": false,
-                        "controlAddress": "/updateRate"
-                      },
-                      {
-                        "value": false,
-                        "controlAddress": "/sendOnOutputChangeOnly"
+                        "value": 0.2586126625537872,
+                        "controlAddress": "/flagY"
                       }
                     ],
-                    "editorIsCollapsed": true
+                    "niceName": "grid2 2",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
                   },
-                  "filters": {
-                    "viewOffset": [
-                      0,
-                      0
+                  {
+                    "parameters": [
+                      {
+                        "value": 0.001629417762160301,
+                        "controlAddress": "/flagY"
+                      }
                     ],
-                    "viewZoom": 1.0
+                    "niceName": "grid1 2",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
                   },
-                  "outputs": {
-                    "viewOffset": [
-                      0,
-                      0
+                  {
+                    "parameters": [
+                      {
+                        "value": 0.5602886080741882,
+                        "controlAddress": "/flagY"
+                      }
                     ],
-                    "viewZoom": 1.0
+                    "niceName": "grid3 2",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 0.8507913947105408,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid4 2",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 2.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.06308193504810333,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid1 3",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "2 - What time is it",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "8:07-8:11",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 2.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.2921322286128998,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid2 3",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "2 - What time is it",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "00:59-1:05",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 2.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.8843109011650085,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid4 3",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "2 - What time is it",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "7:58-8:00",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 2.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.599394679069519,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid3 3",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "2 - What time is it",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "3:17-4:25",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 2.960000038146973,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.05749534443020821,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid1 4",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "3 - Snooze alarm clocks",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "0:00-0:02",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 2.960000038146973,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.593808114528656,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid3 4",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "4 - Clocks and Arieals",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "0:24-0:44",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 2.960000038146973,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.2865456342697144,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid2 4",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "4 - Clocks and Arieals",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "0:0-0:18",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 2.960000038146973,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.8787243366241455,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid4 4",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "4 - Clocks and Arieals",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "1:33-1:52",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 5.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.3312383890151978,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid2 5",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 1.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.599394679069519,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid3",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "8:49",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 5.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.07425511628389359,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid1 5",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 1.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.8843109011650085,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid4",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "09:05-09:10",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 5.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.9234170913696289,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid4 5",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 4.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.6105679273605347,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid3 1",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 1.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.2921322286128998,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid2",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "8:49-8:34",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 5.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.6329143047332764,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid3 5",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector3/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 1.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.06308193504810333,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid1",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "00:36-00:37 10:25-10:35 ",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 4.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.05190874636173248,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid1 1",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "4 - Clocks and Arieals",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector1/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": "1:53-2:11",
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 4.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.9010707139968872,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid4 1",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector4/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 4.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.3088920116424561,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "grid2 1",
+                    "type": "TimeTrigger",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/File",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        },
+                        {
+                          "niceName": "Consequence 1",
+                          "type": "Consequence",
+                          "commandModule": "oscEntryBg",
+                          "commandPath": "",
+                          "commandType": "Set Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/floatingSelector2/Custom/Timecodes",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              }
+                            ],
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
                   }
-                }
-              },
-              "type": "Mapping"
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
             }
           ],
           "viewOffset": [
@@ -1071,7 +3628,7 @@
             {
               "parameters": [
                 {
-                  "value": 1.419999957084656,
+                  "value": 0.0,
                   "controlAddress": "/time"
                 },
                 {
@@ -1083,7 +3640,7 @@
                   "controlAddress": "/loopJumpCue"
                 }
               ],
-              "niceName": "Cue",
+              "niceName": "0",
               "containers": {
                 "conditions": {
                   "viewOffset": [
@@ -1098,11 +3655,7 @@
             {
               "parameters": [
                 {
-                  "value": false,
-                  "controlAddress": "/locked"
-                },
-                {
-                  "value": 4.519999980926514,
+                  "value": 1.0,
                   "controlAddress": "/time"
                 },
                 {
@@ -1114,7 +3667,7 @@
                   "controlAddress": "/loopJumpCue"
                 }
               ],
-              "niceName": "Cue 1",
+              "niceName": "1a",
               "containers": {
                 "conditions": {
                   "viewOffset": [
@@ -1124,6 +3677,184 @@
                   "viewZoom": 1.0
                 }
               },
+              "type": "BaseItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 2.0,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "Pause",
+                  "controlAddress": "/actionOnCue"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "1b",
+              "containers": {
+                "conditions": {
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                }
+              },
+              "type": "BaseItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 2.960000038146973,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "Pause",
+                  "controlAddress": "/actionOnCue"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "1c",
+              "containers": {
+                "conditions": {
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                }
+              },
+              "type": "BaseItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 4.0,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "Pause",
+                  "controlAddress": "/actionOnCue"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "1d",
+              "containers": {
+                "conditions": {
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                }
+              },
+              "type": "BaseItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 5.0,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "Pause",
+                  "controlAddress": "/actionOnCue"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "1end",
+              "containers": {
+                "conditions": {
+                  "viewOffset": [
+                    0,
+                    0
+                  ],
+                  "viewZoom": 1.0
+                }
+              },
+              "type": "BaseItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 5.940000057220459,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "Cue 3",
+              "type": "BaseItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 7.039999961853027,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "Cue 2",
+              "type": "BaseItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 8.0,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "Cue 5",
+              "type": "BaseItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 8.960000038146973,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "Cue 4",
+              "type": "BaseItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": 9.979999542236328,
+                  "controlAddress": "/time"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/loopJumpCue"
+                }
+              ],
+              "niceName": "Cue 6",
               "type": "BaseItem"
             }
           ],
@@ -1147,8 +3878,100 @@
       {
         "niceName": "Router",
         "type": "BaseItem",
-        "sourceModule": "customVariables",
+        "sourceModule": "oscPics",
         "sourceValues": {
+          "items": [
+            {
+              "niceName": "Listen",
+              "type": "BaseItem",
+              "customName": "Listen 4"
+            },
+            {
+              "niceName": "Sync",
+              "type": "BaseItem",
+              "customName": "Sync 4"
+            },
+            {
+              "niceName": "Listen",
+              "type": "BaseItem",
+              "customName": "Listen 1"
+            },
+            {
+              "niceName": "Sync",
+              "type": "BaseItem",
+              "customName": "Sync 1"
+            },
+            {
+              "niceName": "File",
+              "type": "BaseItem",
+              "customName": "File 2"
+            },
+            {
+              "niceName": "Timecodes",
+              "type": "BaseItem",
+              "customName": "Timecodes 2"
+            },
+            {
+              "niceName": "Randomize",
+              "type": "BaseItem",
+              "customName": "Randomize 2"
+            },
+            {
+              "niceName": "Next",
+              "type": "BaseItem",
+              "customName": "Next 2"
+            },
+            {
+              "niceName": "Current",
+              "type": "BaseItem",
+              "customName": "Current 2"
+            },
+            {
+              "niceName": "Listen",
+              "type": "BaseItem",
+              "customName": "Listen 2"
+            },
+            {
+              "niceName": "Sync",
+              "type": "BaseItem",
+              "customName": "Sync 2"
+            },
+            {
+              "niceName": "Listen",
+              "type": "BaseItem",
+              "customName": "Listen 3"
+            },
+            {
+              "niceName": "Sync",
+              "type": "BaseItem",
+              "customName": "Sync 3"
+            },
+            {
+              "niceName": "File",
+              "type": "BaseItem",
+              "customName": "File 1"
+            },
+            {
+              "niceName": "Timecodes",
+              "type": "BaseItem",
+              "customName": "Timecodes 1"
+            },
+            {
+              "niceName": "Randomize",
+              "type": "BaseItem",
+              "customName": "Randomize 1"
+            },
+            {
+              "niceName": "Next",
+              "type": "BaseItem",
+              "customName": "Next 1"
+            },
+            {
+              "niceName": "Current",
+              "type": "BaseItem",
+              "customName": "Current 1"
+            }
+          ],
           "viewOffset": [
             0,
             0
