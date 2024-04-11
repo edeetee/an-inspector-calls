@@ -1,8 +1,5 @@
 "cue","op","pars",
-"0","op.wallBg.footageSelector1",,"File=0"
-,"op.wallBg.footageSelector2",,"File=0"
-,"op.wallBg.footageSelector3",,"File=0"
-,"op.wallBg.footageSelector4",,"File=0"
+"0",,,
 "1a","op.wallBg.footageSelector1","Timecodes=""00:35-00:37 10:25-10:35""","File=1"
 ,"op.wallBg.footageSelector2","Timecodes=""8:49-8:34""","File=1"
 ,"op.wallBg.footageSelector3","Timecodes=""8:49""","File=1"
@@ -16,6 +13,14 @@
 ,"op.wallBg.footageSelector3","Timecodes=""3:17-4:25""","File=4"
 ,"op.wallBg.footageSelector4","Timecodes=""7:58-8:00""","File=4"
 "1d","op.wallBg.footageSelector1","Timecodes=""1:53-2:11""","File=4"
-,"op.wallBg.footageSelector2",,"File=0"
-,"op.wallBg.footageSelector3",,"File=0"
-,"op.wallBg.footageSelector4",,"File=0"
+"1end","op.wallBg.footageSelector1",,
+"2","op.wallBg.footageSelector1","Timecodes=""0-0:09 2:27-2:59""","File=5"
+,"op.wallBg.footageSelector2","Timecodes=""17-40""","File=5"
+,"op.wallBg.footageSelector3","Timecodes=""4:23-4:31""","File=5"
+,"op.wallBg.footageSelector4","Timecodes=""01:05-02:21""","File=1"
+,"op.clock.clockSopGen","Speed=-0.7",
+"2end","op.wallBg.footageSelector1",,
+"3",,,
+"4","op.painting.footageSelector1","Timecodes=""00:47-01:23""","File=6"
+"5","op.painting.footageSelector1","Timecodes=""0:28-0:55""","File=6"
+"6","op.painting.footageSelector1","Timecodes=""0:08-0:43""","File=6"
