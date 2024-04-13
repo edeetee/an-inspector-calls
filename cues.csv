@@ -20,7 +20,133 @@
 ,"op.wallBg.footageSelector4","Timecodes=""01:05-02:21""","File=1"
 ,"op.clock.clockSopGen","Speed=-0.7",
 "2end","op.wallBg.footageSelector1",,
-"3",,,
+"3","op.painting.staticImageLandscape","Img=1",
+"3end",,,
 "4","op.painting.footageSelector1","Timecodes=""00:47-01:23""","File=6"
-"5","op.painting.footageSelector1","Timecodes=""0:28-0:55""","File=6"
-"6","op.painting.footageSelector1","Timecodes=""0:08-0:43""","File=6"
+"4end",,,
+"5","op.painting.footageSelector2","Timecodes=""0:28-0:55""","File=7"
+,"op.clock.clockSopGen","Speed=.2",
+"5b","op.door.doorEnabled","Doorenabled=True",
+"5end",,,
+"6","op.painting.footageSelector2","Timecodes=""0:08-0:43""","File=8"
+"6end",,,
+"7","op.painting.staticImageLandscape","Img=2",
+"8","op.painting.staticImageLandscape","Img=3",
+"7again","op.painting.staticImageLandscape","Img=2",
+"78end",,,
+"9","op.door.doorEnabled","Doorenabled=True",
+"9end",,,
+"10","op.painting.footageSelector2","Timecodes=""3:30-3:39 0:39-0:42""","File=9"
+"10end",,,
+"11","op.door.doorEnabled","Doorenabled=True",
+"11end",,,
+"12","op.clock.clockSopGen","Speed=-.8",
+,"op.painting.footageSelector1","Timecodes=""1:06-1:13 0:34-0:42""","File=10"
+"13","op.clock.clockSopGen","Speed=-1.2",
+"13end",,,
+"14","op.door.doorEnabled","Doorenabled=True",
+"14end",,,
+"15","op.clock.clockSopGen","Speed=-1.1",
+"15end",,,
+"16","op.clock.clockSopGen","Speed=.8",
+"16end",,,
+"17","op.painting.staticImageLandscape","Img=4",
+"17a","op.painting.staticImageLandscape","Img=1",
+"17end",,,
+"18","op.door.doorEnabled","Doorenabled=True",
+"18end",,,
+"19",,,
+"20","op.wallBg.footageSelector1","Timecodes=""0:17-0:26""","File=11"
+,"op.painting.footageSelector2","Timecodes=""1:23-1:40 2:25-2:40""","File=12"
+,"op.wallBg.footageSelector3","Timecodes=""0:05-0:17""","File=15"
+,"op.wallBg.footageSelector4","Timecodes=""2:41-2:48""","File=14"
+,"op.painting.footageSelector1","Timecodes=""0:36-1:01""","File=13"
+"20end",,,
+"21","op.painting.staticImageLandscape","Img=5",
+"21end",,,
+"22",,,
+"22end",,,
+"23","op.door.doorEnabled","Doorenabled=True",
+"23angel",,,
+"23end",,,
+"24a","op.painting.staticImageLandscape","Img=6",
+"24b","op.painting.staticImageLandscape","Img=7",
+"24c","op.painting.staticImageLandscape","Img=6",
+"24end",,,
+"25","op.door.doorEnabled","Doorenabled=True",
+"25end",,,
+"26","op.clock.clockSopGen","Speed=-.8",
+"26end",,,
+"27","op.painting.footageSelector1","Timecodes=""0:00-0:36""","File=16"
+"27end",,,
+"28a","op.clock.clockSopGen","Speed=-.8",
+"28b","op.clock.clockSopGen","Speed=-1",
+"28c","op.clock.clockSopGen","Speed=-.7","Scale=5"
+"28end",,,
+"29","op.clock.clockSopGen","Speed=-.6",
+"29end",,,
+"30","op.painting.footageSelector1","Timecodes=""4:45-5:00""","File=18"
+"30end",,,
+"31a","op.painting.book","Enabled=True",
+"31b","op.painting.footageSelector1","Timecodes=""0:00-0:34""","File=16"
+"31end",,,
+"32","op.painting.staticImageLandscape","Img=8",
+"32end",,,
+"33","op.door.doorEnabled","Doorenabled=True",
+"33end",,,
+"34","op.door.doorEnabled","Doorenabled=True",
+"34end",,,
+"35","op.door.doorEnabled","Doorenabled=True",
+"35end",,,
+"36","op.painting.staticImageLandscape","Img=9",
+"36end",,,
+"37","op.door.doorEnabled","Doorenabled=True",
+"37end",,,
+"38","op.painting.footageSelector1","Timecodes=""4:23-4:29 4:30-4:44""","File=18"
+,"op.wallBg.footageSelector3","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
+,"op.wallBg.footageSelector4","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
+,"op.wallBg.footageSelector1","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
+,"op.wallBg.footageSelector2","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
+"38end",,,
+"39","op.painting.staticImageLandscape","Img=10",
+"39end",,,
+"40","op.door.doorEnabled","Doorenabled=True",
+"40end",,,
+"41","op.clock.clockSopGen","Speed=-.6",
+"41end",,,
+"42","op.door.doorEnabled","Doorenabled=True",
+"42end",,,
+"43","op.door.doorEnabled","Doorenabled=True",
+"43end",,,
+"44","op.painting.staticImageLandscape","Flashes=1 4 8 10 11 12 5 1",
+,"op.painting.staticImageLandscape2","Flashes=1 4 8 10 11 12 5 1",
+,"op.painting.staticImage1","Flashes=1 4 8 10 11 12 5 1",
+,"op.painting.staticImage2","Flashes=1 4 8 10 11 12 5 1",
+,"op.painting.staticImage3","Flashes=1 4 8 10 11 12 5 1",
+"44end",,,
+"45","op.painting.staticImageLandscape","Folder=""D:/an_inspector_calls/pictures/cue51/""","Start=0.2"
+,"op.painting.staticImageLandscape2","Folder=""D:/an_inspector_calls/pictures/cue51/""","Start=0.4"
+,"op.painting.staticImage1","Folder=""D:/an_inspector_calls/pictures/cue51/""","Start=0.1"
+,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/cue51/""","Start=0.8"
+,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/cue51/""","Start=0.9"
+,"op.painting.staticImage4","Folder=""D:/an_inspector_calls/pictures/cue51/""","Start=0.6"
+,"op.clock.clockSopGen","Speed=-.5","Scale=4"
+"45end",,,
+"46","op.clock.clockSopGen","Speed=-.5",
+"46end",,,
+"47a","op.painting.staticImageLandscape","Folder=""D:/an_inspector_calls/pictures/cue41/""","Start=0.2"
+,"op.painting.staticImageLandscape2","Folder=""D:/an_inspector_calls/pictures/cue41/""","Start=0.4"
+,"op.painting.staticImage1","Folder=""D:/an_inspector_calls/pictures/cue41/""","Start=0.1"
+,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/cue41/""","Start=0.8"
+,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/cue41/""","Start=0.9"
+"47b","op.painting.staticImageLandscape","Folder=""D:/an_inspector_calls/pictures/girla.jpg""","Start=0.2"
+,"op.painting.staticImageLandscape2","Folder=""D:/an_inspector_calls/pictures/girla.jpg""","Start=0.2"
+,"op.painting.staticImage1","Folder=""D:/an_inspector_calls/pictures/girla.jpg""","Start=0.1"
+,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/girla.jpg""","Start=0.8"
+,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/girla.jpg""","Start=0.9"
+"47c","op.painting.staticImageLandscape","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""","Start=0.2"
+,"op.painting.staticImageLandscape2","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""","Start=0.2"
+,"op.painting.staticImage1","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""","Start=0.1"
+,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""","Start=0.8"
+,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""","Start=0.9"
+"47end",,,

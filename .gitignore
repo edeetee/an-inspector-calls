@@ -7,3 +7,5 @@
 /.direnv
 found_footage/media*
 *.mov
+._*
+TouchdesignerCrash.*
