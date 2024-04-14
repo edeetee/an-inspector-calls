@@ -1,5 +1,5 @@
 "cue","op","pars",
-"0",,,
+"0","op.painting.ghostly","Brightness=0",
 "1a","op.wallBg.footageSelector1","Timecodes=""00:35-00:37 10:25-10:35""","File=1"
 ,"op.wallBg.footageSelector2","Timecodes=""8:49-8:34""","File=1"
 ,"op.wallBg.footageSelector3","Timecodes=""8:49""","File=1"
