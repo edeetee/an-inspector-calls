@@ -175,14 +175,6 @@
 ,"op.painting.staticImage1","Folder=""D:/an_inspector_calls/pictures/cue41/""","Start=0.1"
 ,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/cue41/""","Start=0.8"
 ,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/cue41/""","Start=0.9"
-"47b","op.painting.staticImageLandscape","Folder=""D:/an_inspector_calls/pictures/girla.jpg""","Start=0.2"
-,"op.painting.staticImageLandscape2","Folder=""D:/an_inspector_calls/pictures/girla.jpg""","Start=0.2"
-,"op.painting.staticImage1","Folder=""D:/an_inspector_calls/pictures/girla.jpg""","Start=0.1"
-,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/girla.jpg""","Start=0.8"
-,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/girla.jpg""","Start=0.9"
-"47c","op.painting.staticImageLandscape","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""","Start=0.2"
-,"op.painting.staticImageLandscape2","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""","Start=0.2"
-,"op.painting.staticImage1","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""","Start=0.1"
-,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""","Start=0.8"
-,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""","Start=0.9"
+"47b","op.painting.staticImageOverride","Folder=""D:/an_inspector_calls/pictures/girla.jpg""",
+"47c","op.painting.staticImageOverride","Folder=""D:/an_inspector_calls/pictures/girlb.jpg""",
 "47end",,,
