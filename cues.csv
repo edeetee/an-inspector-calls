@@ -2,21 +2,15 @@
 "0","op.painting.ghostly","Brightness=0",
 ,"op.painting.whiteFrames","Opacity=1",
 ,"op.painting.ghostly","Postoff=-0.01",
-"1a","op.wallBg.footageSelector1","Timecodes=""00:35-00:37 10:25-10:35""","File=1"
-,"op.wallBg.footageSelector2","Timecodes=""8:49-8:34""","File=1"
-,"op.wallBg.footageSelector3","Timecodes=""8:49""","File=1"
-,"op.wallBg.footageSelector4","Timecodes=""09:05-09:10""","File=1"
-"1b","op.wallBg.footageSelector1","Timecodes=""8:07-8:11""","File=2"
-,"op.wallBg.footageSelector2","Timecodes=""00:59-1:05""","File=2"
-,"op.wallBg.footageSelector3","Timecodes=""3:17-4:25""","File=2"
-,"op.wallBg.footageSelector4","Timecodes=""7:58-8:00""","File=2"
-"1c","op.wallBg.footageSelector1","Timecodes=""0-0:02""","File=3"
-,"op.wallBg.footageSelector2","Timecodes=""00:59-1:05""","File=4"
-,"op.wallBg.footageSelector3","Timecodes=""3:17-4:25""","File=4"
-,"op.wallBg.footageSelector4","Timecodes=""7:58-8:00""","File=4"
-"1d","op.wallBg.footageSelector1","Timecodes=""1:53-2:11""","File=4"
-"1end","op.wallBg.footageSelector1",,
-"2","op.painting.footageSelector1","Timecodes=""0-0:09 2:27-2:59""","File=5"
+"1","op.wallBg.footageSelector1","Timecodes=""00:35-00:37 10:25-10:35 8:34-8:49 8:49 09:05-09:10""","File=1"
+,"op.wallBg.footageSelector2","Timecodes=""8:07-8:11 00:59-1:05 3:17-4:25 7:58-8:00""","File=2"
+,"op.painting.footageSelector1","Timecodes=""8:49-8:34 8:49 09:05-09:10 00:35-00:37 10:25-10:35""","File=1"
+,"op.painting.footageSelector2","Timecodes=""3:17-4:25 7:58-8:00 8:07-8:11 00:59-1:05""","File=2"
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
+,"op.painting.whiteFrames","Opacity=1",
+,"op.painting.ghostly","Postoff=-0.01",
+"2","op.painting.footageSelector1","Timecodes=""0-0:09 2:27-4:00""","File=5"
 ,"op.painting.footageSelector2","Timecodes=""17-40""","File=5"
 ,"op.painting.footageSelector3","Timecodes=""4:23-4:31""","File=5"
 ,"op.painting.footageSelector4","Timecodes=""01:05-02:21""","File=1"
@@ -25,7 +19,8 @@
 ,"op.wallBg.footageSelector2","Timecodes=""8:49-8:34""","File=1"
 ,"op.wallBg.footageSelector3","Timecodes=""8:49""","File=1"
 ,"op.wallBg.footageSelector4","Timecodes=""09:05-09:10""","File=1"
-"2end","op.wallBg.footageSelector1",,
+,"op.painting.whiteFrames","Opacity=1",
+,"op.painting.ghostly","Postoff=-0.01",
 "3","op.painting.staticImageLandscape","Img=1",
 "3end",,,
 "4","op.painting.footageSelector1","Timecodes=""00:47-01:23""","File=6"
@@ -36,9 +31,9 @@
 "5end",,,
 "6","op.painting.footageSelector2","Timecodes=""0:08-0:43""","File=8"
 "6end",,,
-"7","op.painting.staticImageLandscape","Img=2",
-"8","op.painting.staticImageLandscape","Img=3",
-"7again","op.painting.staticImageLandscape","Img=2",
+"7","op.painting.staticImageLandscape2","Img=2",
+"8","op.painting.staticImageLandscape2","Img=3",
+"7again","op.painting.staticImageLandscape2","Img=2",
 "78end",,,
 "9","op.door.doorEnabled","Doorenabled=True",
 "9end",,,
@@ -68,7 +63,7 @@
 ,"op.wallBg.footageSelector4","Timecodes=""2:41-2:48""","File=14"
 ,"op.painting.footageSelector1","Timecodes=""0:36-1:01""","File=13"
 "20end",,,
-"21","op.painting.staticImageLandscape","Img=5",
+"21","op.painting.staticImageLandscape2","Img=5",
 "21end",,,
 "22",,,
 "22end",,,
@@ -100,7 +95,7 @@
 "31a","op.painting.book","Enabled=True",
 "31b","op.painting.footageSelector1","Timecodes=""0:00-0:34""","File=16"
 "31end",,,
-"32","op.painting.staticImageLandscape","Img=8",
+"32","op.painting.staticImageLandscape2","Img=8",
 "32end",,,
 "33","op.door.doorEnabled","Doorenabled=True",
 "33end",,,
@@ -118,7 +113,7 @@
 ,"op.wallBg.footageSelector1","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
 ,"op.wallBg.footageSelector2","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
 "38end",,,
-"39","op.painting.staticImageLandscape","Img=10",
+"39","op.painting.staticImageLandscape2","Img=10",
 "39end",,,
 "40","op.door.doorEnabled","Doorenabled=True",
 "40end",,,
