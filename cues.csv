@@ -4,11 +4,11 @@
 ,"op.painting.ghostly","Postoff=-0.01",
 "1","op.wallBg.footageSelector1","Timecodes=""00:36-00:41 10:25-10:35 8:34-8:49 8:49-10:30 09:05-09:10""","File=1"
 ,"op.wallBg.footageSelector2","Timecodes=""8:07-8:11 00:59-1:05 3:17-4:25 7:58-8:00""","File=2"
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 ,"op.painting.footageSelector1","Timecodes=""8:49-8:34 8:49-10:30 09:05-09:10 00:36-00:41 10:25-10:35""","File=1"
 ,"op.painting.footageSelector2","Timecodes=""3:17-4:25 7:58-8:00 8:07-8:11 00:59-1:05""","File=2"
 ,"op.painting.footageSelector4","Timecodes=""09:05-09:10 00:36-00:41 10:25-10:35 8:34-8:49 8:49-10:30""","File=1"
-,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
-,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 ,"op.painting.whiteFrames","Opacity=1",
 "2","op.painting.footageSelector1","Timecodes=""0-0:09 2:27-4:00""","File=5"
 ,"op.painting.footageSelector2","Timecodes=""17-40""","File=5"
@@ -26,50 +26,62 @@
 "4end",,,
 "5","op.painting.footageSelector2","Timecodes=""0:28-0:55""","File=7"
 ,"op.clock.clockSopGen","Speed=.2",
-"5b","op.door.doorEnabled","Doorenabled=True",
 "5end",,,
 "6","op.painting.footageSelector2","Timecodes=""0:08-0:43""","File=8"
 "6end",,,
+"6door","op.door.doorEnabled","Doorenabled=True",
+"6doorend",,,
 "7","op.painting.staticImageLandscape2","Img=2",
+"7end",,,
 "8","op.painting.staticImageLandscape2","Img=3",
-"7again","op.painting.staticImageLandscape2","Img=2",
-"78end",,,
-"9","op.door.doorEnabled","Doorenabled=True",
-"9end",,,
+"8end",,,
 "10","op.painting.footageSelector2","Timecodes=""3:30-3:39 0:39-0:42""","File=9"
 "10end",,,
 "11","op.door.doorEnabled","Doorenabled=True",
 "11end",,,
 "12","op.clock.clockSopGen","Speed=-.8",
 ,"op.painting.footageSelector1","Timecodes=""1:06-1:13 0:34-0:42""","File=10"
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
+"12end",,,
+"12.5","op.door.doorEnabled","Doorenabled=True",
+"12.5end",,,
 "13","op.clock.clockSopGen","Speed=-1.2",
+,"op.wallBg.footageSelector1","Timecodes=""00:36-00:41 10:25-10:35 8:34-8:49 8:49-10:30 09:05-09:10""","File=1"
+,"op.wallBg.footageSelector2","Timecodes=""8:07-8:11 00:59-1:05 3:17-4:25 7:58-8:00""","File=2"
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 "13end",,,
 "14","op.door.doorEnabled","Doorenabled=True",
 "14end",,,
 "14.5","op.door.doorEnabled","Doorenabled=True",
 "14.5end",,,
 "15","op.clock.clockSopGen","Speed=-1.1",
+,"op.wallBg.footageSelector1","Timecodes=""00:36-00:41 10:25-10:35 8:34-8:49 8:49-10:30 09:05-09:10""","File=1"
+,"op.wallBg.footageSelector2","Timecodes=""8:07-8:11 00:59-1:05 3:17-4:25 7:58-8:00""","File=2"
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 "15end",,,
 "16","op.clock.clockSopGen","Speed=.8",
+,"op.wallBg.footageSelector2","Timecodes=""8:07-8:11 00:59-1:05 3:17-4:25 7:58-8:00""","File=2"
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 "16end",,,
 "17","op.painting.staticImageLandscape","Img=4",
 "17a","op.painting.staticImageLandscape","Img=1",
 "17end",,,
 "18","op.door.doorEnabled","Doorenabled=True",
 "18end",,,
-"19",,,
+"19",,
 "20","op.wallBg.footageSelector1","Timecodes=""0:17-0:26""","File=11"
 ,"op.painting.footageSelector2","Timecodes=""1:23-1:40 2:25-2:40""","File=12"
 ,"op.wallBg.footageSelector3","Timecodes=""0:05-0:17""","File=15"
 ,"op.wallBg.footageSelector4","Timecodes=""2:41-2:48""","File=14"
 ,"op.painting.footageSelector1","Timecodes=""0:36-1:01""","File=13"
 "20end",,,
-"21","op.painting.staticImageLandscape2","Img=5",
-"21end",,,
 "22","op.wallBg.birds","Opacity=1",
 "22end",,,
 "23","op.door.doorEnabled","Doorenabled=True",
-"23angel",,,
 "23end",,,
 "24a","op.painting.staticImageLandscape","Img=6",
 "24b","op.painting.staticImageLandscape","Img=7",
@@ -78,10 +90,14 @@
 "25","op.door.doorEnabled","Doorenabled=True",
 "25end",,,
 "26","op.clock.clockSopGen","Speed=-.8",
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 "26end",,,
 "27","op.painting.footageSelector1","Timecodes=""0:00-0:36""","File=16"
 "27end",,,
 "28a","op.clock.clockSopGen","Speed=-.8",
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 "28b","op.clock.clockSopGen","Speed=-1",
 "28c","op.clock.clockSopGen","Speed=-.7","Scale=5"
 ,"op.wallBg.footageSelector1","Timecodes=""8:07-8:11""","File=2"
@@ -90,6 +106,8 @@
 ,"op.wallBg.footageSelector4","Timecodes=""7:58-8:00""","File=2"
 "28end",,,
 "29","op.clock.clockSopGen","Speed=-.6",
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 "29end",,,
 "30","op.painting.footageSelector1","Timecodes=""4:45-5:00""","File=18"
 "30end",,,
@@ -98,17 +116,19 @@
 "31end",,,
 "32","op.painting.staticImageLandscape2","Img=8",
 "32end",,,
-"33","op.door.doorEnabled","Doorenabled=True",
-"33end",,,
 "34","op.door.doorEnabled","Doorenabled=True",
 "34end",,,
 "35","op.door.doorEnabled","Doorenabled=True",
 "35end",,,
 "36","op.painting.staticImageLandscape","Img=11",
 "36end",,,
-"37","op.door.doorEnabled","Doorenabled=True",
-"37end",,,
-"38","op.painting.footageSelector1","Timecodes=""4:23-4:29 4:30-4:44""","File=18"
+"38a","op.painting.footageSelector1","Timecodes=""4:23-4:29 4:30-4:44""","File=18"
+,"op.wallBg.footageSelector3","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
+,"op.wallBg.footageSelector4","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
+,"op.wallBg.footageSelector1","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
+,"op.wallBg.footageSelector2","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
+,"op.door.doorEnabled","Doorenabled=True",
+"38b","op.painting.footageSelector1","Timecodes=""4:23-4:29 4:30-4:44""","File=18"
 ,"op.wallBg.footageSelector3","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
 ,"op.wallBg.footageSelector4","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
 ,"op.wallBg.footageSelector1","Timecodes=""15:31-15:38 24:00-24:09 31:56-32:15 31:36-31:47 41:35-41:52""","File=17"
@@ -116,9 +136,9 @@
 "38end",,,
 "39","op.painting.staticImageLandscape2","Img=10",
 "39end",,,
-"40","op.door.doorEnabled","Doorenabled=True",
-"40end",,,
 "41","op.clock.clockSopGen","Speed=-.6",
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 "41end",,,
 "42","op.door.doorEnabled","Doorenabled=True",
 "42end",,,
@@ -140,8 +160,15 @@
 ,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/cue51/""","Start=0.8"
 ,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/cue51/""","Start=0.9"
 ,"op.clock.clockSopGen","Speed=-.5","Scale=4"
+,"op.wallBg.footageSelector1","Timecodes=""00:36-00:41 10:25-10:35 8:34-8:49 8:49-10:30 09:05-09:10""","File=1"
+,"op.wallBg.footageSelector2","Timecodes=""8:07-8:11 00:59-1:05 3:17-4:25 7:58-8:00""","File=2"
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 "45end",,,
 "46","op.clock.clockSopGen","Speed=-.5",
+,"op.wallBg.footageSelector2","Timecodes=""8:07-8:11 00:59-1:05 3:17-4:25 7:58-8:00""","File=2"
+,"op.wallBg.footageSelector3","Timecodes=""0-0:02""","File=3"
+,"op.wallBg.footageSelector4","Timecodes=""00:59-1:05 3:17-4:25 7:58-8:00 1:53-2:11""","File=4"
 "46end",,,
 "47a","op.painting.staticImageLandscape","Folder=""D:/an_inspector_calls/pictures/cue41/""","Start=0.2"
 ,"op.painting.staticImageLandscape2","Folder=""D:/an_inspector_calls/pictures/cue41/""","Start=0.4"
