@@ -15,11 +15,6 @@
 ,"op.painting.footageSelector2","Timecodes=""3:17-4:25 7:58-8:00 8:07-8:11 00:59-1:05""","File=2"
 ,"op.painting.footageSelector4","Timecodes=""09:05-09:10 00:36-00:41 10:25-10:35 8:34-8:49 8:49-10:30""","File=1"
 ,"op.painting.whiteFrames","Opacity=1",
-,"op.painting.staticImage1","Folder=""D:/an_inspector_calls/pictures/family5.jpeg""",
-,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/family4.jpeg""",
-,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/family3.jpeg""",
-,"op.painting.staticImageLandscape","Folder=""D:/an_inspector_calls/pictures/family1.jpeg""",
-,"op.painting.staticImageLandscape2","Folder=""D:/an_inspector_calls/pictures/family2.jpeg""",
 "2","op.painting.footageSelector1","Timecodes=""0-0:09 2:27-4:00""","File=5"
 ,"op.painting.footageSelector2","Timecodes=""17-40""","File=5"
 ,"op.painting.footageSelector3","Timecodes=""4:23-4:31""","File=5"
@@ -30,11 +25,6 @@
 ,"op.wallBg.footageSelector3","Timecodes=""8:49-10:30""","File=1"
 ,"op.wallBg.footageSelector4","Timecodes=""09:05-09:10""","File=1"
 ,"op.painting.whiteFrames","Opacity=1",
-,"op.painting.staticImage1","Folder=""D:/an_inspector_calls/pictures/family5.jpeg""",
-,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/family4.jpeg""",
-,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/family3.jpeg""",
-,"op.painting.staticImageLandscape","Folder=""D:/an_inspector_calls/pictures/family1.jpeg""",
-,"op.painting.staticImageLandscape2","Folder=""D:/an_inspector_calls/pictures/family2.jpeg""",
 "3","op.painting.staticImageLandscape","Img=1",
 "3end",,,
 "4","op.painting.footageSelector1","Timecodes=""00:47-01:23""","File=6"
