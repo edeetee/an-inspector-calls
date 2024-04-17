@@ -1,6 +1,11 @@
 "cue","op","pars",
 "0","op.painting.ghostly","Brightness=0",
 ,"op.painting.whiteFrames","Opacity=1",
+,"op.painting.staticImage1","Folder=""D:/an_inspector_calls/pictures/family1.jpeg""",
+,"op.painting.staticImage2","Folder=""D:/an_inspector_calls/pictures/family1.jpeg""",
+,"op.painting.staticImage3","Folder=""D:/an_inspector_calls/pictures/family1.jpeg""",
+,"op.painting.staticImageLandscape","Folder=""D:/an_inspector_calls/pictures/family1.jpeg""",
+,"op.painting.staticImageLandscape2","Folder=""D:/an_inspector_calls/pictures/family1.jpeg""",
 ,"op.painting.ghostly","Postoff=-0.01",
 "1","op.wallBg.footageSelector1","Timecodes=""00:36-00:41 10:25-10:35 8:34-8:49 8:49-10:30 09:05-09:10""","File=1"
 ,"op.wallBg.footageSelector2","Timecodes=""8:07-8:11 00:59-1:05 3:17-4:25 7:58-8:00""","File=2"
